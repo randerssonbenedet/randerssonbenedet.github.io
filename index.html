@@ -15,6 +15,23 @@
 				text-decoration: underline;
 				text-decoration-color: grey;
 			}
+
+			.image-container {
+                height: 300px; /* Set the desired height for all image containers */
+                overflow: hidden;
+                position: relative;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* This ensures the image covers the container */
+                transition: transform 0.3s ease;
+            }
+
+            .image-container img:hover {
+                transform: scale(1.1); /* Zoom in effect on hover */
+            }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -24,7 +41,7 @@
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="pic2.jpg" alt="" /></a>
 					<h1><strong>R. Andersson Benedet</strong><br />
-					MSc Engineering physics, KTH<br />
+					MSc Engineering Physics, KTH<br />
 					</a></h1>
 				</div>
 			</header>
@@ -47,32 +64,39 @@
 						<h2>Recent Projects</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="Project1.png" class="image fit thumb"><img src="Project1.png" alt="" /></a>
+								<a href="Concrete-block.JPG" class="image fit thumb image-container"><img src="Concrete-block.JPG" alt="" /></a>
+								<a href="https://github.com/randerssonbenedet/Kepler-problem" class="underline-hover">
+									<h3>Concrete modeling (Jupyter)</h3>
+								</a>								
+								<p>Short machine learning project I did as part of ML summer course.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="kepler.jpg" class="image fit thumb image-container"><img src="kepler.jpg" alt="" /></a>
 								<a href="https://github.com/randerssonbenedet/Kepler-problem" class="underline-hover">
 									<h3>Kepler problem simulation (MATLAB)</h3>
 								</a>								
 								<p>Simulation of the two body problem, solved by approximating differential equaiton solutions using different numerical methods.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="Project2.png" class="image fit thumb"><img src="Project2.png" alt="" /></a>
+								<a href="Project2.png" class="image fit thumb image-container"><img src="Project2.png" alt="" /></a>
 								<a href="https://github.com/randerssonbenedet/Numerical-methods-project" class="underline-hover">
 									<h3>Numerical analysis projects (MATLAB)</h3>
 								</a>								
 								<p>General method to fit a graph to an arbitrary number of points using newtons and least squares solution, etc.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="Project3.png" class="image fit thumb"><img src="Project3.png" alt="" /></a>
+								<a href="Project3.png" class="image fit thumb image-container"><img src="Project3.png" alt="" /></a>
 								<a href="https://github.com/randerssonbenedet/Self-driving-car-simulation" class="underline-hover">
 									<h3>Self driving car simulation (MATLAB)</h3>
 								</a>								
 								<p>Simple simulation of self driving car algorithm with one lane.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/fulls/04.jpg" alt="" /></a>
+								<a href="battleship.jpg" class="image fit thumb image-container"><img src="battleship.jpg" alt="" /></a>
 								<a href="https://github.com/randerssonbenedet/Self-driving-car-simulation" class="underline-hover">
 									<h3>Battleships game (Python)</h3>
 								</a>								
-								<p>Battleships game with graphic interface and scoreboard coded entirely from scratch.</p>
+								<p>Battleships game with graphic interface and scoreboard coded entirely from scratch. Done before ChatGPT existed.</p>
 							</article>
 						</div>
 						<ul class="actions">
